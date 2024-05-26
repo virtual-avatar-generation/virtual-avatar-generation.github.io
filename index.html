@@ -114,211 +114,51 @@
     </div>
   </section>
   <section id="section_few_shot_generation" class="sectiongrey">
-    <div class="w-layout-blockcontainer containterbody w-container">
-        <h1 class="heading-7">Few-Shot Generation</h1>
-        <p class="paragraphhover"><br>Using annotated images and a video of an empty environment, SABR-CLIMB generates plausible avatar movements that consider the annotated objects. Below are examples of indoor and outdoor routes, captured with various videographies.</p>
-        <p class="paragraphhover"><br>* Hover over the video to see the corresponding image.</p>
-        <div data-delay="5000" data-animation="cross" class="slidermaingallery w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-            <div class="w-slider-mask">
-                <div class="w-slide">
-                    <div id="w-node-1" class="w-layout-layout quickstackgallery wf-layout-layout">
-                      <div class="w-layout-cell cell">
-                          <div class="video-container">
-                              <mux-player
-                                playback-id="F502vA3W3re9QRcBeKfmmDGBiAXf02kaM007J71php9400U"
-                                autoPlay="muted"
-                              ></mux-player>
-                              <!-- <img src="images/few_shot_generation/FGT_another_outdoor_climbing8305.jpg" alt="FGT_another_outdoor_climbing8305" class="hover-image"> -->
-                          </div>
-                      </div>
-                      <!-- <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_cave1_climbing758.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_cave1_climbing758.jpg" alt="FGT_cave1_climbing758" class="hover-image">
+      <div class="w-layout-blockcontainer containterbody w-container">
+          <h1 class="heading-7">Few-Shot Generation</h1>
+          <p class="paragraphhover">Using annotated images and a video of an empty environment, SABR-CLIMB generates plausible avatar movements that consider the annotated objects. Below are examples of indoor and outdoor routes, captured with various videographies.</p>
+          <p class="paragraphhover">* Hover over the video to see the corresponding image.</p>
+          <div data-delay="5000" data-animation="cross" class="slidermaingallery w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+              <div class="w-slider-mask">
+                  <div class="w-slide">
+                      <div class="video-grid">
+                        <div class="video-container">
+                            <mux-player
+                              playback-id="F502vA3W3re9QRcBeKfmmDGBiAXf02kaM007J71php9400U"
+                              autoPlay="muted"
+                            ></mux-player>
+                        </div>
+                        <div class="video-container">
+                            <mux-player
+                              playback-id="another-playback-id"
+                              autoPlay="muted"
+                            ></mux-player>
+                        </div>
+                        <div class="video-container">
+                            <mux-player
+                              playback-id="another-playback-id"
+                              autoPlay="muted"
+                            ></mux-player>
+                        </div>
+                        <div class="video-container">
+                            <mux-player
+                              playback-id="another-playback-id"
+                              autoPlay="muted"
+                            ></mux-player>
                         </div>
                       </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_clear_route_slightly_shaky_camera_climbing273.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_clear_route_slightly_shaky_camera_climbing273.jpg" alt="FGT_clear_route_slightly_shaky_camera_climbing273" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_clear_wall_2_shots_and_camera_pan_climbing1486.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_clear_wall_2_shots_and_camera_pan_climbing1486.jpg" alt="FGT_clear_wall_2_shots_and_camera_pan_climbing1486" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_clear_wall_2_shots_climbing1108.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_clear_wall_2_shots_climbing1108.jpg" alt="FGT_clear_wall_2_shots_climbing1108" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_clear_wall_climbing1372.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_clear_wall_climbing1372.jpg" alt="FGT_clear_wall_climbing1372" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare1_1_climbing940.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare1_1_climbing940.jpg" alt="FGT_compare1_1_climbing940" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare1_2_climbing941.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare1_2_climbing941.jpg" alt="FGT_compare1_2_climbing941" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare2_1_climbing943.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare2_1_climbing943.jpg" alt="FGT_compare2_1_climbing943" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare2_2_climbing944.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare2_2_climbing944.jpg" alt="FGT_compare2_2_climbing944" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare3_1_climbing987.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare3_1_climbing987.jpg" alt="FGT_compare3_1_climbing987" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare3_2_climbing988.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare3_2_climbing988.jpg" alt="FGT_compare3_2_climbing988" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare4_1_climbing994.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare4_1_climbing994.jpg" alt="FGT_compare4_1_climbing994" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_compare4_2_climbing995.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_compare4_2_climbing995.jpg" alt="FGT_compare4_2_climbing995" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_medium_distance_bouldering_route_climbing418.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_medium_distance_bouldering_route_climbing418.jpg" alt="FGT_medium_distance_bouldering_route_climbing418" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_messy_route_medium_dist_climbing2422.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_messy_route_medium_dist_climbing2422.jpg" alt="FGT_messy_route_medium_dist_climbing2422" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_moon_compare1_1_climbing4786.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_moon_compare1_1_climbing4786.jpg" alt="FGT_moon_compare1_1_climbing4786" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_moon_compare1_2_climbing4787.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_moon_compare1_2_climbing4787.jpg" alt="FGT_moon_compare1_2_climbing4787" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_moonboard_compare1_1_climbing4724.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_moonboard_compare1_1_climbing4724.jpg" alt="FGT_moonboard_compare1_1_climbing4724" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_moonboard_compare1_2_climbing4725.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_moonboard_compare1_2_climbing4725.jpg" alt="FGT_moonboard_compare1_2_climbing4725" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_moonboard1_climbing256.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_moonboard1_climbing256.jpg" alt="FGT_moonboard1_climbing256" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_outdoor_1_climbing455.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_outdoor_1_climbing455.jpg" alt="FGT_outdoor_1_climbing455" class="hover-image">
-                        </div>
-                      </div>
-                      <div class="w-layout-cell cell">
-                        <div class="div-block-6">
-                            <video autoplay="" loop="" muted="" playsinline="" class="image imagemaingallery lazy">
-                                <source src="videos/few_shot_generation/FGT_simple_climb_climbing4283.mp4" type="video/mp4">
-                            </video>
-                            <img src="images/few_shot_generation/FGT_simple_climb_climbing4283.jpg" alt="FGT_simple_climb_climbing4283" class="hover-image">
-                        </div>
-                      </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="left-arrow w-slider-arrow-left">
-                <div class="iconslider w-icon-slider-left"></div>
-            </div>
-            <div class="w-slider-arrow-right">
-                <div class="iconslider w-icon-slider-right"></div>
-            </div>
-            <div class="w-slider-nav w-slider-nav-invert w-round"></div>
-        </div>
-    </div>
+                  </div>
+                  <!-- Repeat the above block for additional slides -->
+              </div>
+              <div class="left-arrow w-slider-arrow-left">
+                  <div class="iconslider w-icon-slider-left"></div>
+              </div>
+              <div class="w-slider-arrow-right">
+                  <div class="iconslider w-icon-slider-right"></div>
+              </div>
+              <div class="w-slider-nav w-slider-nav-invert w-round"></div>
+          </div>
+      </div>
   </section>
   <section id="section_zero_shot_generation" class="sectionwhite">
       <div class="w-layout-blockcontainer containterbody w-container">
