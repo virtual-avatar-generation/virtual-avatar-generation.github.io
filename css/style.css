@@ -1,7 +1,7 @@
 .slider-container {
   position: relative;
   width: 100%;
-  max-width: 600px; /* Reduce the max-width for smaller videos */
+  max-width: 1000px; /* Reduce the max-width for smaller videos */
   margin: auto;
   overflow: hidden;
 }
