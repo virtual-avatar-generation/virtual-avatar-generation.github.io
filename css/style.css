@@ -10,12 +10,13 @@
   transition: transform 0.5s ease-in-out;
 }
 .slide {
-  min-width: 100%;
-  box-sizing: border-box;
+  /* min-width: 100%;
+  box-sizing: border-box; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
+  margin: 0 auto;
 }
 .slide video {
   width: 100%;
