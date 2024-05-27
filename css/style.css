@@ -352,6 +352,20 @@
   background-color: #43464d;
 }
 
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the buttons on smaller screens */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+  .button-primary {
+    padding: 8px 15px; /* Reduce padding */
+    font-size: 10px;   /* Reduce font size */
+  }
+}
+
 .shadow-two {
   box-shadow: 0 4px 24px rgba(150, 163, 181, .08);
 }
