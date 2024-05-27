@@ -12,7 +12,7 @@
     gtag('config', 'G-M0BT8CWE2L');
   </script>
   <meta charset="utf-8">
-  <title>Virtual Avatar Generation</title>
+  <title>World Navigation via Virtual Avatars</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   
@@ -87,7 +87,7 @@
         <div class="hero-split">
           <p class="paragraph" style="font-size: 24px;"><b>S</b>imulation <b>A</b>pplications and <b>B</b>iotechnology <b>R</b>esearch</p>
           <h1 class="heading-4">Virtual avatar generation models as world navigators</h1>
-          <p class="margin-bottom-24px">A Visual Prompt-Driven Space-Time Diffusion Transformer for Avatar Motion Generation</p>
+          <p class="margin-bottom-24px">A Visual Prompt-Driven Space-Time Diffusion Transformer for Context-Aware Avatar Motion Generation</p>
           <div style="margin-bottom: 20px;">
             <a href="https://arxiv.org/abs/2401.12945" class="button-primary w-button" style="margin-right: 10px;">Read Paper</a>
             <a href="https://github.com/SABR-ai/virtual-avatar-generation" class="button-primary w-button" style="margin-right: 10px;">Codebase</a>
@@ -178,7 +178,7 @@
             </div>
         </div>
         <button class="nav-button prev" onclick="moveSlide('few-shot-slider', -1)">&#10094;</button>
-        <button class="nav-button next" onclick="moveSlide('few-shot-slider', -1)">&#10095;</button>
+        <button class="nav-button next" onclick="moveSlide('few-shot-slider', 1)">&#10095;</button>
       </div>
       <div class="dots" id="few-shot-dots"></div>
     </div>
@@ -219,7 +219,7 @@
                 </div>
             </div>
             <button class="nav-button prev" onclick="moveSlide('zero-shot-slider', -1)">&#10094;</button>
-            <button class="nav-button next" onclick="moveSlide('zero-shot-slider', -1)">&#10095;</button>
+            <button class="nav-button next" onclick="moveSlide('zero-shot-slider', 1)">&#10095;</button>
           </div>
           <div class="dots" id="zero-shot-dots"></div>
       </div>
