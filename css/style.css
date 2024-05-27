@@ -11,12 +11,12 @@
 }
 .slide {
   min-width: 100%;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
-  margin: 0 auto;
+  padding: 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
 .video-wrapper {
   position: relative;
