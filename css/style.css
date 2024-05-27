@@ -18,7 +18,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px; /* Adjust the gap between videos */
-  max-width: 900px; /* Adjust the maximum width of the grid */
+  max-width: 800px; /* Adjust the maximum width of the grid */
   margin: 0 auto; /* Center the video grid */
   padding-top: 20px; /* Adjust padding to control space between text and videos */
 }
