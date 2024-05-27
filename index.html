@@ -118,7 +118,56 @@
       <h1 class="heading-7">Few-Shot Generation</h1>
       <p class="paragraphhover">Using annotated images and a video of an empty environment, SABR-CLIMB generates plausible avatar movements that consider the annotated objects. Below are examples of indoor and outdoor routes, captured with various videographies.</p>
       <p class="paragraphhover">* Hover over the video to see the corresponding image.</p>
-      <div data-delay="5000" data-animation="cross" class="slidermaingallery w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+      <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+              <mux-player playback-id="9gls5PT7aXmDnBsP4KgzjsxSuw1bP6l5qOgnFA9tdY" autoPlay="muted"></mux-player>>
+              <mux-player playback-id="7bDX02CQDXgfGdVk02TjEuVDwtqBhdCN3UwsMvIfBLpYM" autoPlay="muted"></mux-player>
+              <mux-player playback-id="VW01t2n01CdM12S00ZpR3u00AWUU8n74mf80201f6yEx6SFLc" autoPlay="muted"></mux-player>
+              <mux-player playback-id="4hsO6FPNXZay8bnYbyThmp35fDyoairPY3hAvTPu01lI" autoPlay="muted"></mux-player>
+            </div>
+            <div class="slide">
+              <mux-player playback-id="be02RHNk12g601scAQSWtaTKViETjcj4gTYV01qEbUDdIw" autoPlay="muted"></mux-player>
+              <mux-player playback-id="mp01A3kYp5lc2dCneZWin02OYz711mLU15kaNOxQSKTqQ" autoPlay="muted"></mux-player>
+              <mux-player playback-id="FE1LNic1kBzIEMY926X7m9aH01BIMglzm02YypR00kXXiw" autoPlay="muted"></mux-player>
+              <mux-player playback-id="Pl3K00A6yZLyMxQqtb502GOZjcdgUG4g022M97jXnv00Vhk" autoPlay="muted"></mux-player>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <button class="nav-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="nav-button next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+      <div class="dots">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <!-- Add more dots as needed -->
+      </div>
+
+      <script>
+          let currentIndex = 0;
+
+          function moveSlide(n) {
+              showSlide(currentIndex += n);
+          }
+
+          function currentSlide(n) {
+              showSlide(currentIndex = n);
+          }
+
+          function showSlide(n) {
+              const slides = document.querySelectorAll('.slide');
+              const dots = document.querySelectorAll('.dot');
+              if (n >= slides.length) currentIndex = 0;
+              if (n < 0) currentIndex = slides.length - 1;
+              slides.forEach((slide, index) => {
+                  slide.style.transform = `translateX(${-currentIndex * 100}%)`;
+              });
+              dots.forEach((dot, index) => {
+                  dot.classList.toggle('active', index === currentIndex);
+              });
+          }
+      </script>
+      <!-- <div data-delay="5000" data-animation="cross" class="slidermaingallery w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
         <div class="w-slider-mask">
           <div class="w-slide">
             <div id="w-node-_7202d2ad-58dd-cd36-10ba-96916f5b54a4-47edbc52" class="w-layout-layout quickstackgallery wf-layout-layout">
@@ -177,7 +226,7 @@
           <div class="iconslider w-icon-slider-right"></div>
         </div>
         <div class="w-slider-nav w-slider-nav-invert w-round"></div>
-      </div>
+      </div> -->
     </div>
   </section>
   <!-- <section id="section_few_shot_generation" class="sectiongrey">
