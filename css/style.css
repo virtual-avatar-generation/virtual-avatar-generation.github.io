@@ -59,7 +59,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.dot_second {
+.dot-second {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -101,7 +101,7 @@
   box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
 
-.slide_second {
+.slide-second {
   min-width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

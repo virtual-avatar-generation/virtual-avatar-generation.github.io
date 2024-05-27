@@ -218,7 +218,7 @@
           <p class="paragraphhover"><br>Even without any visual prompting and using only a video of an empty environment, SABR-CLIMB can generate plausible avatar movements with the right context. Below are examples of this "zero-shot" generation behavior.</p>
           <div class="slider-container">
             <div class="slider">
-                <div class="slide_second">
+                <div class="slide-second">
                   <div class="video-container">
                     <mux-player playback-id="YUyaJkSEb023PWmjokFFrzVwUl01H5CSad00ZwHVo02pSg8" autoPlay="muted"></mux-player>
                   </div>
@@ -232,7 +232,7 @@
                     <mux-player playback-id="02Or02LjrOnYjSyJMdNNcHxGcoBS400PTPecvYMpMOOYgw" autoPlay="muted"></mux-player>
                   </div>
                 </div>
-                <div class="slide_second">
+                <div class="slide-second">
                   <div class="video-container">
                     <mux-player playback-id="YrxqL9FwbJ1T7CjPcDR4QaaVYH0069z7HU8UMW7SEESU" autoPlay="muted"></mux-player>
                   </div>
@@ -251,8 +251,8 @@
             <button class="nav-button next" onclick="moveSlide2(1)">&#10095;</button>
             </div>
             <div class="dots">
-              <span class="dot_second active" onclick="currentSlide2(0)"></span>
-              <span class="dot_second" onclick="currentSlide2(1)"></span>
+              <span class="dot-second active" onclick="currentSlide2(0)"></span>
+              <span class="dot-second" onclick="currentSlide2(1)"></span>
             </div>
             <script>
               let cIndex = 0;
@@ -266,8 +266,8 @@
               }
       
               function showSlide2(n) {
-                const slides = document.querySelectorAll('.slide');
-                const dots = document.querySelectorAll('.dot');
+                const slides = document.querySelectorAll('.slide-second');
+                const dots = document.querySelectorAll('.dot-second');
                 if (n >= slides.length) cIndex = 0;
                 if (n < 0) cIndex = slides.length - 1;
                 slides.forEach((slide, index) => {
