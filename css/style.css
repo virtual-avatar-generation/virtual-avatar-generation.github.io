@@ -1930,10 +1930,9 @@
     }
 
     .icon {
-      width: 40px;  /* Increase width */
-      height: 40px; /* Increase height */
-      background-color: #fff;
-      border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
     }
 
     .navbar.active .nav-menu {
@@ -1945,7 +1944,7 @@
   .nav-menu,
   .w-nav-button {
     transition: all 0.3s ease;
-  }
+}
 }
 
 
