@@ -15,6 +15,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
+  margin: 0 auto; /* Center the video grid */
   padding: 40px; /* Add padding for spacing */
   box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
