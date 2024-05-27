@@ -1132,8 +1132,15 @@
   right: 0%;
 }
 
-.div-block-14 {
+/* .div-block-14 {
   margin-top: 20px;
+} */
+.div-block-14 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 .quick-stack-4 {
