@@ -216,47 +216,70 @@
       <div class="w-layout-blockcontainer containterbody w-container">
           <h1 class="heading-7">Zero-Shot Generation</h1>
           <p class="paragraphhover"><br>Even without any visual prompting and using only a video of an empty environment, SABR-CLIMB can generate plausible avatar movements with the right context. Below are examples of this "zero-shot" generation behavior.</p>
-          <p class="paragraphhover"><br>* Hover over the video to see the input prompt.</p>
-          <div data-delay="5000" data-animation="cross" class="slidermaingallery w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-            <div class="w-slider-mask">
-                <div class="w-slide">
-                    <div class="video-grid">
-                      <div class="video-container">
-                          <mux-player
-                            playback-id="F502vA3W3re9QRcBeKfmmDGBiAXf02kaM007J71php9400U"
-                            autoPlay="muted"
-                          ></mux-player>
-                      </div>
-                      <div class="video-container">
-                          <mux-player
-                            playback-id="another-playback-id"
-                            autoPlay="muted"
-                          ></mux-player>
-                      </div>
-                      <div class="video-container">
-                          <mux-player
-                            playback-id="another-playback-id"
-                            autoPlay="muted"
-                          ></mux-player>
-                      </div>
-                      <div class="video-container">
-                          <mux-player
-                            playback-id="another-playback-id"
-                            autoPlay="muted"
-                          ></mux-player>
-                      </div>
-                    </div>
+          <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                  <div class="video-container">
+                    <mux-player playback-id="YUyaJkSEb023PWmjokFFrzVwUl01H5CSad00ZwHVo02pSg8" autoPlay="muted"></mux-player>
+                  </div>
+                  <div class="video-container">
+                    <mux-player playback-id="qWyZK6SBvbdE00gb4hWXtGjHoYD900HhNmlFmSn02ZjjHI" autoPlay="muted"></mux-player>
+                  </div>
+                  <div class="video-container">
+                    <mux-player playback-id="EGYMmeMCNlYr6vi00MxxLl2KhjLbsk1I4PXB7002hPS9g" autoPlay="muted"></mux-player>
+                  </div>
+                  <div class="video-container">
+                    <mux-player playback-id="02Or02LjrOnYjSyJMdNNcHxGcoBS400PTPecvYMpMOOYgw" autoPlay="muted"></mux-player>
+                  </div>
                 </div>
-                <!-- Repeat the above block for additional slides -->
+                <div class="slide">
+                  <div class="video-container">
+                    <mux-player playback-id="YrxqL9FwbJ1T7CjPcDR4QaaVYH0069z7HU8UMW7SEESU" autoPlay="muted"></mux-player>
+                  </div>
+                  <div class="video-container">
+                    <mux-player playback-id="kU4a00hlvb701gFjuSHB008OrrmXcrIaEGIDSzH4dBa3fk" autoPlay="muted"></mux-player>
+                  </div>
+                  <div class="video-container">
+                    <mux-player playback-id="h2ASYRnFn00l5Fl8pGgM500OIdE61wvBW00dCr1w028doGE" autoPlay="muted"></mux-player>
+                  </div>
+                  <div class="video-container">
+                    <mux-player playback-id="aeMeFWAAmVCGLWr1brFZ01bxv3dEbni7sO5G6cSrST5c" autoPlay="muted"></mux-player>
+                  </div> 
+                </div>
             </div>
-            <div class="left-arrow w-slider-arrow-left">
-                <div class="iconslider w-icon-slider-left"></div>
+            <button class="nav-button prev" onclick="moveSlide2(-1)">&#10094;</button>
+            <button class="nav-button next" onclick="moveSlide2(1)">&#10095;</button>
             </div>
-            <div class="w-slider-arrow-right">
-                <div class="iconslider w-icon-slider-right"></div>
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide2(0)"></span>
+              <span class="dot" onclick="currentSlide2(1)"></span>
+              <span class="dot" onclick="currentSlide2(2)"></span>
+              <span class="dot" onclick="currentSlide2(3)"></span>
             </div>
-            <div class="w-slider-nav w-slider-nav-invert w-round"></div>
-        </div>
+            <script>
+              let cIndex = 0;
+      
+              function moveSlide2(n) {
+                showSlide(cIndex += n);
+              }
+      
+              function currentSlide2(n) {
+                showSlide2(cIndex = n);
+              }
+      
+              function showSlide2(n) {
+                const slides = document.querySelectorAll('.slide');
+                const dots = document.querySelectorAll('.dot');
+                if (n >= slides.length) cIndex = 0;
+                if (n < 0) cIndex = slides.length - 1;
+                slides.forEach((slide, index) => {
+                    slide.style.transform = `translateX(${-cIndex * 100}%)`;
+                });
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === cIndex);
+                });
+              }
+            </script>
       </div>
   </section>
   <style>
