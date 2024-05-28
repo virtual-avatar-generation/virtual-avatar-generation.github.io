@@ -184,6 +184,10 @@
               </div>
             </div>
         </div>
+        <button class="nav-button prev" onclick="moveSlide('few-shot-slider', -1)">&#10094;</button>
+        <button class="nav-button next" onclick="moveSlide('few-shot-slider', 1)">&#10095;</button>
+      </div>
+      <div class="slider-container" id="few-shot-slider">
         <div class="slider" id="imageSlider">
           <div class="slide">
             <div class="image-container">
@@ -349,7 +353,6 @@
       document.getElementById('imageSlider').classList.add('active');
       document.getElementById('visualPromptBtn').classList.add('active');
       document.getElementById('simulationOutputBtn').classList.remove('active');
-      updateDots();
     }
 
     function showSimulationOutput() {
@@ -357,21 +360,6 @@
       document.getElementById('imageSlider').classList.remove('active');
       document.getElementById('visualPromptBtn').classList.remove('active');
       document.getElementById('simulationOutputBtn').classList.add('active');
-      updateDots();
-    }
-
-    function updateDots() {
-      const slider = document.querySelector('.slider.active');
-      const slides = slider.getElementsByClassName('slide');
-      const dotsContainer = document.getElementById('few-shot-dots');
-      dotsContainer.innerHTML = '';
-      for (let i = 0; i < slides.length; i++) {
-        const dot = document.createElement('span');
-        dot.className = 'dot';
-        if (i === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => setSlide(i));
-        dotsContainer.appendChild(dot);
-      }
     }
     
     function initializeSlider(sliderId, dotsId) {
