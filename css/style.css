@@ -101,6 +101,17 @@
   box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
 
+.copyslide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  margin: 0 auto; /* Center the video grid */
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in the width/height */
+}
+
 /* Media query for mobile devices */
 @media screen and (max-width: 767px) {
   .slide {
