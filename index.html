@@ -349,6 +349,7 @@
       document.getElementById('imageSlider').style.display = 'block';
       document.getElementById('visualPromptBtn').classList.add('active');
       document.getElementById('simulationOutputBtn').classList.remove('active');
+      setActiveSlide('imageSlider', 0);
     }
 
     function showSimulationOutput() {
@@ -356,6 +357,16 @@
       document.getElementById('imageSlider').style.display = 'none';
       document.getElementById('visualPromptBtn').classList.remove('active');
       document.getElementById('simulationOutputBtn').classList.add('active');
+      setActiveSlide('videoSlider', 0);
+    }
+
+    function moveSlide(sliderId, n) {
+      const slider = document.getElementById(sliderId).querySelector('.slider.active');
+      let slides = slider.getElementsByClassName('slide');
+      let currentSlide = Array.from(slides).findIndex(slide => slide.style.display === 'block');
+      slides[currentSlide].style.display = 'none';
+      currentSlide = (currentSlide + n + slides.length) % slides.length;
+      slides[currentSlide].style.display = 'block';
     }
     
     function initializeSlider(sliderId, dotsId) {
