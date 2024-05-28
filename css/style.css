@@ -732,6 +732,16 @@
   border: 1px solid #a3a3a3;
 }
 
+.image-container {
+  flex: 1 1 calc(25% - 10px);
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
 .imagestyledropgallery {
   width: 100%;
   border: 1px solid #b1b1b1;

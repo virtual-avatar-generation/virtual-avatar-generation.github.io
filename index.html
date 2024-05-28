@@ -184,7 +184,7 @@
               </div>
             </div>
         </div>
-        <div class="slider" id="imageSlider" style="display: none;">
+        <div class="slider" id="imageSlider">
           <div class="slide">
             <div class="image-container">
               <img src="path_to_image_folder/image1.jpg" alt="Visual Prompt 1">
@@ -345,15 +345,15 @@
     });
 
     function showVisualPrompt() {
-      document.getElementById('videoSlider').style.display = 'none';
-      document.getElementById('imageSlider').style.display = 'block';
+      document.getElementById('videoSlider').classList.remove('active');
+      document.getElementById('imageSlider').classList.add('active');
       document.getElementById('visualPromptBtn').classList.add('active');
       document.getElementById('simulationOutputBtn').classList.remove('active');
     }
 
     function showSimulationOutput() {
-      document.getElementById('videoSlider').style.display = 'block';
-      document.getElementById('imageSlider').style.display = 'none';
+      document.getElementById('videoSlider').classList.add('active');
+      document.getElementById('imageSlider').classList.remove('active');
       document.getElementById('visualPromptBtn').classList.remove('active');
       document.getElementById('simulationOutputBtn').classList.add('active');
     }
