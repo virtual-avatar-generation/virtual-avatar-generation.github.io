@@ -120,7 +120,7 @@
   <section id="section_few_shot_generation" class="sectiongrey">
     <div class="w-layout-blockcontainer containterbody w-container">
       <h1 class="heading-7">Few-Shot Generation</h1>
-      <p class="paragraphhover">Using annotated images and a video of an empty environment, SABR-CLIMB generates plausible avatar movements that consider the annotated objects. Below are examples of indoor and outdoor routes, captured with various videographies.</p>
+      <p class="paragraphhover">Using annotated objects in images as visual prompts and a video of an empty environment, SABR-CLIMB generates plausible avatar movements that consider the annotated objects. Below are examples of indoor and outdoor routes, captured with various videographies.</p>
       <div class="button-container">
         <button id="visualPromptBtn" class="toggle-button" onclick="showVisualPrompt()">Visual Prompt</button>
         <button id="simulationOutputBtn" class="toggle-button active" onclick="showSimulationOutput()">Simulation Output</button>
@@ -342,6 +342,10 @@
     document.addEventListener("DOMContentLoaded", () => {
       initializeSlider('few-shot-slider', 'few-shot-dots');
       initializeSlider('zero-shot-slider', 'zero-shot-dots');
+      setActiveSlide('videoSlider', 0);
+      setActiveSlide('imageSlider', 0);
+      document.getElementById('videoSlider').style.display = 'block';
+      document.getElementById('imageSlider').style.display = 'none';
     });
 
     function showVisualPrompt() {
