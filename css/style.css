@@ -7,15 +7,6 @@
 }
 
 .slider {
-  visibility: hidden;
-  position: absolute;
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slider.active {
-  visibility: visible;
-  position: absolute;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
