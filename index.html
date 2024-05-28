@@ -360,13 +360,11 @@
       setActiveSlide('videoSlider', 0);
     }
 
-    function moveSlide(sliderId, n) {
-      const slider = document.getElementById(sliderId).querySelector('.slider.active');
+    function setActiveSlide(sliderId, slideIndex) {
+      const slider = document.getElementById(sliderId);
       let slides = slider.getElementsByClassName('slide');
-      let currentSlide = Array.from(slides).findIndex(slide => slide.style.display === 'block');
-      slides[currentSlide].style.display = 'none';
-      currentSlide = (currentSlide + n + slides.length) % slides.length;
-      slides[currentSlide].style.display = 'block';
+      Array.from(slides).forEach(slide => slide.style.display = 'none');
+      slides[slideIndex].style.display = 'block';
     }
     
     function initializeSlider(sliderId, dotsId) {
