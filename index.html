@@ -253,7 +253,7 @@
           <h1 class="heading-7">Zero-Shot Generation</h1>
           <p class="paragraphhover"><br>Even without any visual prompting and using only a video of an empty environment, SABR-CLIMB can generate plausible avatar movements with the right context. Below are examples of this "zero-shot" generation behavior.</p>
           <div class="slider-container" id="zero-shot-slider">
-            <div class="slider">
+            <div class="slider" id="zeroShotSlider">
                 <div class="slide">
                   <div class="video-container">
                     <mux-player playback-id="YUyaJkSEb023PWmjokFFrzVwUl01H5CSad00ZwHVo02pSg8" autoPlay="muted"></mux-player>
@@ -343,22 +343,21 @@
       initializeSlider('few-shot-slider', 'few-shot-dots');
       initializeSlider('zero-shot-slider', 'zero-shot-dots');
       setActiveSlide('videoSlider', 0);
-      setActiveSlide('imageSlider', 0);
-      document.getElementById('videoSlider').style.display = 'block';
-      document.getElementById('imageSlider').style.display = 'none';
+      document.getElementById('videoSlider').classList.add('active');
+      document.getElementById('zeroShotSlider').classList.add('active');
     });
 
     function showVisualPrompt() {
-      document.getElementById('videoSlider').style.display = 'none';
-      document.getElementById('imageSlider').style.display = 'block';
+      document.getElementById('videoSlider').classList.remove('active');
+      document.getElementById('imageSlider').classList.add('active');
       document.getElementById('visualPromptBtn').classList.add('active');
       document.getElementById('simulationOutputBtn').classList.remove('active');
       setActiveSlide('imageSlider', 0);
     }
 
     function showSimulationOutput() {
-      document.getElementById('videoSlider').style.display = 'block';
-      document.getElementById('imageSlider').style.display = 'none';
+      document.getElementById('videoSlider').classList.add('active');
+      document.getElementById('imageSlider').classList.remove('active');
       document.getElementById('visualPromptBtn').classList.remove('active');
       document.getElementById('simulationOutputBtn').classList.add('active');
       setActiveSlide('videoSlider', 0);
@@ -368,7 +367,7 @@
       const slider = document.getElementById(sliderId);
       let slides = slider.getElementsByClassName('slide');
       Array.from(slides).forEach(slide => slide.style.display = 'none');
-      slides[slideIndex].style.display = 'block';
+      slides[slideIndex].style.display = 'flex';
     }
     
     function initializeSlider(sliderId, dotsId) {
