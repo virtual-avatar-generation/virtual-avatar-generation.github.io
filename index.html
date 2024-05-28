@@ -359,9 +359,6 @@
   }
   
   function initializeSlider(sliderId, dotsId) {
-    // const slider = document.getElementById(sliderId);
-    // const slides = slider.querySelectorAll('.slide');
-    // const dotsContainer = document.getElementById(dotsId);
     const slider = document.getElementById(sliderId);
     const slides = slider.querySelectorAll('.slide, .copyslide');
     const dotsContainer = document.getElementById(dotsId);
@@ -392,11 +389,12 @@
   
   function showSlide(sliderId, n) {
     const slider = document.getElementById(sliderId);
+    const testslides = slider.querySelectorAll('.slide');
     const slides = slider.querySelectorAll('.slide, .copyslide');
     const dots = document.getElementById(sliderId.replace('slider', 'dots')).querySelectorAll('.dot');
     
-    if (n >= slides.length) currentIndex[sliderId] = 0;
-    if (n < 0) currentIndex[sliderId] = slides.length - 1;
+    if (n >= testslides.length) currentIndex[sliderId] = 0;
+    if (n < 0) currentIndex[sliderId] = testslides.length - 1;
     
     const newTransform = `translateX(${-currentIndex[sliderId] * 100}%)`;
     slides.forEach(slide => {
