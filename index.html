@@ -349,6 +349,7 @@
       document.getElementById('imageSlider').classList.add('active');
       document.getElementById('visualPromptBtn').classList.add('active');
       document.getElementById('simulationOutputBtn').classList.remove('active');
+      updateDots();
     }
 
     function showSimulationOutput() {
@@ -356,6 +357,21 @@
       document.getElementById('imageSlider').classList.remove('active');
       document.getElementById('visualPromptBtn').classList.remove('active');
       document.getElementById('simulationOutputBtn').classList.add('active');
+      updateDots();
+    }
+
+    function updateDots() {
+      const slider = document.querySelector('.slider.active');
+      const slides = slider.getElementsByClassName('slide');
+      const dotsContainer = document.getElementById('few-shot-dots');
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < slides.length; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => setSlide(i));
+        dotsContainer.appendChild(dot);
+      }
     }
     
     function initializeSlider(sliderId, dotsId) {
