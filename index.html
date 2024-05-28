@@ -345,15 +345,15 @@
     });
 
     function showVisualPrompt() {
-      document.getElementById('videoSlider').classList.remove('active');
-      document.getElementById('imageSlider').classList.add('active');
+      document.getElementById('videoSlider').style.display = 'none';
+      document.getElementById('imageSlider').style.display = 'block';
       document.getElementById('visualPromptBtn').classList.add('active');
       document.getElementById('simulationOutputBtn').classList.remove('active');
     }
 
     function showSimulationOutput() {
-      document.getElementById('videoSlider').classList.add('active');
-      document.getElementById('imageSlider').classList.remove('active');
+      document.getElementById('videoSlider').style.display = 'block';
+      document.getElementById('imageSlider').style.display = 'none';
       document.getElementById('visualPromptBtn').classList.remove('active');
       document.getElementById('simulationOutputBtn').classList.add('active');
     }
