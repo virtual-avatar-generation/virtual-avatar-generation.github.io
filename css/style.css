@@ -1219,6 +1219,17 @@
   font-size: 15px;
 }
 
+.toggle-button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  background-color: #007BFF;
+  color: white;
+}
+
 .celltitleprompt {
   justify-content: flex-start;
   align-items: center;
@@ -1902,5 +1913,3 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
-
