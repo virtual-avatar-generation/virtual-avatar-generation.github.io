@@ -392,7 +392,7 @@
   
   function showSlide(sliderId, n) {
     const slider = document.getElementById(sliderId);
-    const slides = slider.querySelectorAll('.slide');
+    const slides = slider.querySelectorAll('.slide, .copyslide');
     const dots = document.getElementById(sliderId.replace('slider', 'dots')).querySelectorAll('.dot');
     
     if (n >= slides.length) currentIndex[sliderId] = 0;
