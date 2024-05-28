@@ -122,6 +122,13 @@
     padding: 20px;
   }
 
+  .copyslide {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
   .video-container {
     max-width: 100%;
     padding-top: 56.25%; /* Maintain the aspect ratio */
